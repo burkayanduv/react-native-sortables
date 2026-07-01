@@ -95,5 +95,5 @@
     "test": "jest",
     "typecheck": "tsc -p tsconfig.json --noEmit"
   },
-  "types": "dist/typescript/index.d.ts"
+  "types": "src/index.ts"
 }
