@@ -2,8 +2,10 @@
 * text=auto eol=lf
 
 # Keep CRLF where it’s required (override per type)
-*.bat   text eol=crlf
-*.cmd   text eol=crlf
+# -text: don't apply line-ending normalization (upstream's stored blobs are
+# already CRLF; the "text" attribute causes index/worktree hash mismatch on macOS)
+*.bat   -text
+*.cmd   -text
 
 # Never touch binaries
 *.png   binary
